@@ -1,0 +1,14 @@
+{
+  "problems":[
+    {
+      "name": "2+3",
+      "inputs": {
+        "a": 2,
+        "b": 3
+      },
+      "outputs": {
+        "c": {"points_possible":1, "tolerance":0.00001, "expected":5}
+      }
+    }
+  ]
+}

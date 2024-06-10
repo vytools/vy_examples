@@ -1,0 +1,19 @@
+{
+    "name": "NumericalMethods",
+    "image": "vytools/numerical_methods:latest",
+    "workspaceFolder": "/home/user/problem/templates/python",
+    "runArgs": ["--name", "numerical-methods-basic"],
+    "mounts":[
+        "source=${localWorkspaceFolder}/../../,target=/home/user/problem,type=bind,consistency=cached"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "paulosilva.vsc-octave-debugger",
+                "vytools.vdbg-debugger"
+            ]
+        }
+    }
+}
