@@ -1,0 +1,39 @@
+x-vy:
+  nodule:
+    levl: 2
+    pblc:
+      share_data:
+        hide_toolbar: true
+        max_kb_data_size: 10
+        vscode:
+          template: basic
+          image: vytools/numerical_methods:latest
+    prvt:
+      get_from_user_and_dont_expose_from_engine_regex: (?i)add
+      solution:
+        cwd: templates/python
+        cmd: /bin/bash -c "python3 -u ../../setup.py ../../test.json ../../test1.json && python3 -u main.py ../../test1.json ../../result.json"
+      submit_data:
+        engine: alpha_engine
+        max_run_time: 26
+  vscode_zip:
+    name: AddExample.zip
+    path: share
+  public:
+    - share/instructions.md:/code_grader_share/instructions.md
+    - share/test.json:/code_grader_share/test.json
+    - share/templates/c++/add.cpp:/code_grader_share/templates/c++/add.cpp
+    - share/templates/python/add.py:/code_grader_share/templates/python/add.py
+    - share/templates/matlab/add.m:/code_grader_share/templates/matlab/add.m
+  bundles:
+    - bundle:CodeGraderV1
+
+services:
+  hostcode:
+    user: root
+    volumes:
+      - share:/engine/:ro
+  usercode:
+    user: root
+
+version: '3.2'

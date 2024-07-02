@@ -1,0 +1,13 @@
+{
+  "problems":[
+    {
+      "name": "2!",
+      "inputs": {
+        "n": 2
+      },
+      "outputs": {
+        "nfac": {"points_possible":1, "tolerance":0.00001, "expected":2}
+      }
+    }
+  ]
+}
