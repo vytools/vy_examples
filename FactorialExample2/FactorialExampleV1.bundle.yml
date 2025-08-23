@@ -1,5 +1,5 @@
 x-vy:
-  nodule:
+  tool:
     levl: 2
     pblc:
       share_data:
@@ -20,9 +20,9 @@ x-vy:
     name: FactorialExample.zip
     path: share
   public:
-    - share/instructions.md:/code_grader_share/instructions.md
-    - share/test.json:/code_grader_share/test.json
-    - share/templates/python/factorial.py:/code_grader_share/templates/python/factorial.py
+    - share/instructions.md:/instructions.md
+    - share/test.json:/test.json
+    - share/templates/python/factorial.py:/templates/python/factorial.py
   bundles:
     - bundle:CodeGraderV1
 

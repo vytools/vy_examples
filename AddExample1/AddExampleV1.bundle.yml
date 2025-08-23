@@ -1,5 +1,5 @@
 x-vy:
-  nodule:
+  tool:
     levl: 2
     pblc:
       share_data:
@@ -20,11 +20,14 @@ x-vy:
     name: AddExample.zip
     path: share
   public:
-    - share/instructions.md:/code_grader_share/instructions.md
-    - share/test.json:/code_grader_share/test.json
-    - share/templates/c++/add.cpp:/code_grader_share/templates/c++/add.cpp
-    - share/templates/python/add.py:/code_grader_share/templates/python/add.py
-    - share/templates/matlab/add.m:/code_grader_share/templates/matlab/add.m
+    - share/instructions.md:/instructions.md
+    - share/test.json:/test.json
+  language_c++:
+    - share/templates/c++/add.cpp:/templates/c++/add.cpp
+  language_python:
+    - share/templates/python/add.py:/templates/python/add.py
+  language_matlab:
+    - share/templates/matlab/add.m:/templates/matlab/add.m
   bundles:
     - bundle:CodeGraderV1
 
